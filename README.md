@@ -83,11 +83,6 @@ It provides direct links to popular fashion platforms like Amazon, Myntra, H&M, 
 
 ---
 
-## 📸 Screenshots
-
-(Add your screenshots here)
-
----
 
 ## 👩‍💻 Author
 
