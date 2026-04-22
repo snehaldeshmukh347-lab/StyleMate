@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>StyleMate App</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+<h1 class="logo">StyleMate</h1>
+<p>Your Personal Stylist</p>
+
+<div class="filters">
+
+<div class="filter-box">
+<label>Gender</label>
+<select id="gender">
+<option value="">Select</option>
+<option>Female</option>
+<option>Male</option>
+<option>Kids</option>
+</select>
+</div>
+
+<div class="filter-box">
+<label>Age</label>
+<select id="age">
+<option value="">Select</option>
+<option>Kid</option>
+<option>Teen</option>
+<option>Adult</option>
+</select>
+</div>
+
+<div class="filter-box">
+<label>Body Type</label>
+<select id="body">
+<option value="">Select</option>
+<option>Petite</option>
+<option>Hourglass</option>
+<option>Pear</option>
+<option>Apple</option>
+<option>Athletic</option>
+<option>Plus Size</option>
+</select>
+</div>
+
+<div class="filter-box">
+<label>Skin Tone</label>
+<select id="skin">
+<option value="">Select</option>
+<option>Fair</option>
+<option>Medium</option>
+<option>Olive</option>
+<option>Dark</option>
+</select>
+</div>
+
+<div class="filter-box">
+<label>Occasion</label>
+<select id="occasion">
+<option value="">Select</option>
+<option value="casual">Casual</option>
+<option value="party">Party</option>
+<option value="traditional">Traditional</option>
+<option value="college">College</option>
+<option value="gym">Gym</option>
+<option value="beach">Beach</option>
+</select>
+</div>
+
+<button class="main-btn" onclick="generateLooks()">Get Styled</button>
+
+</div>
+
+<h2 id="resultText">Select all options to get recommendations ✨</h2>
+
+<div id="results" class="results"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
