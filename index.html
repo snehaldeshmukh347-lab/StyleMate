@@ -1,25 +1,290 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>StyleMate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <title>StyleMate | Haute Couture Personal AI Stylist</title>
+    <meta name="description" content="StyleMate is a modern AI personal fashion stylist that understands who you are, what you're dressing for, and creates complete personalized outfits.">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="home">
+    <!-- SECTION 1 — NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <span class="brand-name">StyleMate</span>
+                <span class="brand-sub">AI PERSONAL STYLIST</span>
+            </a>
 
-<h1 class="logo">StyleMate</h1>
-<p>Your AI Fashion Stylist</p>
+            <nav class="nav-links">
+                <a href="#experience">Experience</a>
+                <a href="#occasions">Occasions</a>
+            </nav>
 
-<a href="app.html">
-<button class="glow-btn">Get Started</button>
-</a>
+            <div class="nav-actions">
+                <a href="app.html?path=wizard" class="btn-primary-sm">✨ Create My Look</a>
+                <a href="app.html?path=chat" class="btn-secondary-sm">💬 Ask StyleMate</a>
+            </div>
+        </div>
+    </header>
 
-</div>
+
+    <main>
+
+        <!-- SECTION 2 — HERO -->
+        <section class="hero-section">
+            <div class="container-center text-center">
+                <span class="eyebrow-badge">✦ AI PERSONAL STYLIST</span>
+
+                <h1 class="hero-title">
+                    Style that feels<br>
+                    <em>like you.</em>
+                </h1>
+
+                <p class="hero-subtext">
+                    Discover complete personalized outfits created for who you are, what you're dressing for, and your personal vibe. Modify any piece conversationally on the fly.
+                </p>
+
+                <div class="hero-cta-group">
+                    <a href="app.html?path=wizard" class="btn-luxe-primary">
+                        ✨ Create My Look
+                    </a>
+                    <a href="app.html?path=chat" class="btn-luxe-secondary">
+                        💬 Ask StyleMate
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 3 — TWO PATHS -->
+        <section class="paths-section">
+            <div class="container-center">
+                <div class="paths-grid">
+                    
+                    <a href="app.html?path=wizard" class="path-product-card">
+                        <div class="path-card-header">
+                            <span class="path-badge">PATH 01</span>
+                            <span class="path-icon">✨</span>
+                        </div>
+                        <h3>CREATE MY LOOK</h3>
+                        <p class="path-desc">Guided AI styling flow. Provide body type, skin tone, occasion & vibe to receive 3 complete looks.</p>
+                        <div class="path-link">Launch Guided Stylist →</div>
+                    </a>
+
+                    <a href="app.html?path=chat" class="path-product-card">
+                        <div class="path-card-header">
+                            <span class="path-badge">PATH 02</span>
+                            <span class="path-icon">💬</span>
+                        </div>
+                        <h3>ASK STYLEMATE</h3>
+                        <p class="path-desc">Direct AI styling chat. Tell StyleMate what you want naturally: <em>"I want a beach party dress with heels"</em>.</p>
+                        <div class="path-link">Open AI Assistant →</div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 4 — HOW IT WORKS -->
+        <section class="experience-section" id="experience">
+            <div class="container-center">
+                <div class="section-label-center text-center">
+                    <span class="section-tag">HOW STYLEMATE WORKS</span>
+                </div>
+
+                <div class="steps-compact-grid">
+                    <div class="step-compact-card">
+                        <span class="step-num">01</span>
+                        <h4>Understand You</h4>
+                        <p>StyleMate understands your preferences, occasion, body type, skin tone and style.</p>
+                    </div>
+
+                    <div class="step-compact-card">
+                        <span class="step-num">02</span>
+                        <h4>Create Your Look</h4>
+                        <p>AI creates complete personalized outfit options tailored to your context.</p>
+                    </div>
+
+                    <div class="step-compact-card">
+                        <span class="step-num">03</span>
+                        <h4>Refine With AI</h4>
+                        <p>Tell StyleMate what you want changed: <em>"Change jeans to baggy"</em> or <em>"Remove heels"</em>.</p>
+                    </div>
+
+                    <div class="step-compact-card">
+                        <span class="step-num">04</span>
+                        <h4>Find Similar</h4>
+                        <p>Find similar pieces easily from Amazon, Myntra, and AJIO platforms.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 5 — OCCASIONS -->
+        <section class="occasions-section" id="occasions">
+            <div class="container-center">
+                <div class="section-header-compact text-center">
+                    <span class="section-tag">DRESSED FOR EVERY OCCASION</span>
+                    <h2>From everyday plans to unforgettable nights.</h2>
+                </div>
+
+                <div class="occasions-fashion-grid">
+                    
+                    <a href="app.html?path=wizard&occasion=Beach" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Beach & Resort Full Outfit">
+                            <span class="occ-overlay-tag">Resort Luxe</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>Beach & Resort</h3>
+                            <p>Warm sand dunes, soft linen & sunset glamour.</p>
+                        </div>
+                    </a>
+
+                    <a href="app.html?path=wizard&occasion=Office" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&q=80" alt="Office & Corporate Full Outfit">
+                            <span class="occ-overlay-tag">Tailored</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>Office & Corporate</h3>
+                            <p>Beige tailoring, crisp lines & power dressing.</p>
+                        </div>
+                    </a>
+
+                    <a href="app.html?path=wizard&occasion=Casual" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=600&q=80" alt="Casual Weekend Full Outfit">
+                            <span class="occ-overlay-tag">Earthy Neutral</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>Casual Weekend</h3>
+                            <p>Cream knits, soft denim & relaxed fits.</p>
+                        </div>
+                    </a>
+
+                    <a href="app.html?path=wizard&occasion=College" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" alt="College & Campus Full Outfit">
+                            <span class="occ-overlay-tag">Minimal Campus</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>College & Campus</h3>
+                            <p>Subtle streetwear & comfortable layers.</p>
+                        </div>
+                    </a>
+
+                    <a href="app.html?path=wizard&occasion=Date" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80" alt="Date Night Full Outfit">
+                            <span class="occ-overlay-tag">Candlelit</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>Date Night</h3>
+                            <p>Warm ambient lighting & champagne silks.</p>
+                        </div>
+                    </a>
+
+                    <a href="app.html?path=wizard&occasion=Wedding" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=600&q=80" alt="Wedding & Gala Full Outfit">
+                            <span class="occ-overlay-tag">Champagne Gala</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>Wedding & Gala</h3>
+                            <p>Ivory, champagne & muted gold luxury.</p>
+                        </div>
+                    </a>
+
+                    <a href="app.html?path=wizard&occasion=Party" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?auto=format&fit=crop&w=600&q=80" alt="Party & Nightclub Full Outfit">
+                            <span class="occ-overlay-tag">Sophisticated</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>Party & Nightclub</h3>
+                            <p>Charcoal tones & warm ambient nightlife.</p>
+                        </div>
+                    </a>
+
+                    <a href="app.html?path=wizard&occasion=Festive" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=600&q=80" alt="Festive & Diwali Full Outfit">
+                            <span class="occ-overlay-tag">Warm Gold</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>Festive & Diwali</h3>
+                            <p>Muted jewel tones & elegant gold embroidery.</p>
+                        </div>
+                    </a>
+
+                    <a href="app.html?path=wizard&occasion=Travel" class="occasion-card">
+                        <div class="occasion-img-box">
+                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Travel & Vacation Full Outfit">
+                            <span class="occ-overlay-tag">Airport Chic</span>
+                        </div>
+                        <div class="occasion-card-body">
+                            <h3>Travel & Vacation</h3>
+                            <p>Comfortable, polished looks made for every journey.</p>
+                        </div>
+                    </a>
+
+                </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SECTION 6 — FINAL CTA -->
+        <section class="final-cta-compact">
+            <div class="container-center text-center">
+                <span class="eyebrow-badge">YOUR PERSONAL AI STYLIST</span>
+
+                <h2 class="cta-title font-serif">
+                    Ready to meet<br>
+                    <em>your stylist?</em>
+                </h2>
+
+                <div class="cta-btn-group">
+                    <a href="app.html?path=wizard" class="btn-luxe-primary">
+                        ✨ Create My Look
+                    </a>
+                    <a href="app.html?path=chat" class="btn-luxe-secondary">
+                        💬 Ask StyleMate
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- SECTION 7 — FOOTER -->
+    <footer class="footer-minimal">
+        <div class="container-center flex-between-footer">
+            <div class="footer-brand-box">
+                <span class="footer-title">StyleMate AI</span>
+                <span class="footer-tagline">AI PERSONAL STYLING · WHERE TECHNOLOGY MEETS STYLE</span>
+            </div>
+            <div class="footer-copy">
+                © 2026 StyleMate
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -1,91 +1,320 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleMate | AI Styling Studio</title>
+    <meta name="description" content="StyleMate AI Styling Studio. Tell us who you are, what you're dressing for, and your vibe to create complete personalized outfits.">
 
-<title>StyleMate App</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="app">
+    <!-- TOP NAVIGATION (SAME AS HOMEPAGE) -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <span class="brand-name">StyleMate</span>
+                <span class="brand-sub">AI PERSONAL STYLIST</span>
+            </a>
 
-<h1 class="logo">StyleMate</h1>
-<p>Your Personal Stylist</p>
+            <!-- DUAL PATH SWITCHER -->
+            <div class="path-switcher">
+                <button id="path1Btn" class="path-tab active">✨ CREATE MY LOOK</button>
+                <button id="path2Btn" class="path-tab">💬 ASK STYLEMATE</button>
+            </div>
 
-<div class="filters">
+            <nav class="nav-links">
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#occasions">Occasions</a>
+                <a href="app.html?path=wizard">Create My Look</a>
+                <a href="app.html?path=chat">Ask StyleMate</a>
+            </nav>
+        </div>
+    </header>
 
-<div class="filter-box">
-<label>Gender</label>
-<select id="gender">
-<option value="">Select</option>
-<option>Female</option>
-<option>Male</option>
-<option>Kids</option>
-</select>
-</div>
 
-<div class="filter-box">
-<label>Age</label>
-<select id="age">
-<option value="">Select</option>
-<option>Kid</option>
-<option>Teen</option>
-<option>Adult</option>
-</select>
-</div>
+    <main id="studio" class="studio-wrapper">
 
-<div class="filter-box">
-<label>Body Type</label>
-<select id="body">
-<option value="">Select</option>
-<option>Petite</option>
-<option>Hourglass</option>
-<option>Pear</option>
-<option>Apple</option>
-<option>Athletic</option>
-<option>Plus Size</option>
-</select>
-</div>
+        <!-- HERO SECTION -->
+        <section class="studio-hero-compact text-center">
+            <div class="container-center">
+                <span class="eyebrow-badge">STYLEMATE AI</span>
+                <h1 id="pathHeading" class="studio-title font-serif">
+                    Create a look<br>
+                    <em>made for you.</em>
+                </h1>
+                <p id="pathSubheading" class="studio-subtitle">
+                    Tell us who you are, what you're dressing for, and your vibe. StyleMate AI will create a complete personalized outfit.
+                </p>
+            </div>
+        </section>
 
-<div class="filter-box">
-<label>Skin Tone</label>
-<select id="skin">
-<option value="">Select</option>
-<option>Fair</option>
-<option>Medium</option>
-<option>Olive</option>
-<option>Dark</option>
-</select>
-</div>
 
-<div class="filter-box">
-<label>Occasion</label>
-<select id="occasion">
-<option value="">Select</option>
-<option value="casual">Casual</option>
-<option value="party">Party</option>
-<option value="traditional">Traditional</option>
-<option value="college">College</option>
-<option value="gym">Gym</option>
-<option value="beach">Beach</option>
-</select>
-</div>
+        <!-- PATH 1: GUIDED STYLING FORM CONTAINER -->
+        <div id="path1Container" class="studio-form-container">
+            <div class="container-center-narrow">
+                
+                <!-- SECTION 01: AUDIENCE -->
+                <div class="form-card-step">
+                    <div class="step-card-header">
+                        <span class="step-badge">SECTION 01</span>
+                        <span class="eyebrow-sub">WHO ARE WE STYLING?</span>
+                    </div>
+                    <h2>Who is this look for?</h2>
+                    <p class="step-desc">Choose who we're styling.</p>
 
-<button class="main-btn" onclick="generateLooks()">Get Styled</button>
+                    <div class="choice-grid-pills" id="audienceChoices">
+                        <button class="choice selected" data-group="audience" data-value="Women">Women</button>
+                        <button class="choice" data-group="audience" data-value="Men">Men</button>
+                        <button class="choice" data-group="audience" data-value="Kids">Kids</button>
+                    </div>
 
-</div>
+                    <!-- Kids Age Group Sub-Section -->
+                    <div id="kidsAgeGroup" class="kids-age-box hidden">
+                        <span class="eyebrow-sub">KIDS AGE GROUP</span>
+                        <div class="choice-grid-pills sub-grid">
+                            <button class="choice sub-choice selected" data-group="kidsAge" data-value="Toddler (2–4 yrs)">Toddler (2–4 yrs)</button>
+                            <button class="choice sub-choice" data-group="kidsAge" data-value="Little Kids (5–8 yrs)">Little Kids (5–8 yrs)</button>
+                            <button class="choice sub-choice" data-group="kidsAge" data-value="Pre-Teen (9–12 yrs)">Pre-Teen (9–12 yrs)</button>
+                            <button class="choice sub-choice" data-group="kidsAge" data-value="Teen (13–16 yrs)">Teen (13–16 yrs)</button>
+                        </div>
+                    </div>
+                </div>
 
-<h2 id="resultText">Select all options to get recommendations ✨</h2>
 
-<div id="results" class="results"></div>
+                <!-- SECTION 02: BODY SHAPE & SKIN TONE -->
+                <div class="form-card-step">
+                    <div class="step-card-header">
+                        <span class="step-badge">SECTION 02</span>
+                        <span class="eyebrow-sub">PERSONAL DETAILS</span>
+                    </div>
+                    <h2>Body shape & skin tone.</h2>
 
-</div>
+                    <div class="fields-dual">
+                        <div class="field-box" id="bodyTypeField">
+                            <label for="bodyType">BODY TYPE</label>
+                            <select id="bodyType" class="select-luxe">
+                                <option value="Hourglass">Hourglass</option>
+                                <option value="Pear">Pear</option>
+                                <option value="Apple">Apple</option>
+                                <option value="Rectangle">Rectangle</option>
+                                <option value="Inverted Triangle">Inverted Triangle</option>
+                                <option value="Athletic">Athletic</option>
+                                <option value="Plus/Curvy">Plus / Curvy</option>
+                                <option value="Not Sure">Not Sure (Let AI decide)</option>
+                            </select>
+                        </div>
 
-<script src="script.js"></script>
+                        <div class="field-box">
+                            <label for="skinTone">SKIN TONE</label>
+                            <select id="skinTone" class="select-luxe">
+                                <option value="Fair">Fair</option>
+                                <option value="Light">Light</option>
+                                <option value="Medium" selected>Medium</option>
+                                <option value="Tan">Tan</option>
+                                <option value="Deep">Deep</option>
+                                <option value="Not Sure">Not Sure</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- SECTION 03: PREFERRED COLOURS -->
+                <div class="form-card-step">
+                    <div class="step-card-header">
+                        <span class="step-badge">SECTION 03</span>
+                        <span class="eyebrow-sub">PALETTE PREFERENCE</span>
+                    </div>
+                    <h2>Choose your colours.</h2>
+                    <p class="step-desc">Select one or more colour tones.</p>
+
+                    <div class="color-pills-grid" id="colorPills">
+                        <button class="color-pill selected" data-color="Black"><span class="swatch swatch-black"></span> Black</button>
+                        <button class="color-pill selected" data-color="Beige"><span class="swatch swatch-beige"></span> Beige</button>
+                        <button class="color-pill" data-color="White"><span class="swatch swatch-white"></span> White</button>
+                        <button class="color-pill" data-color="Brown"><span class="swatch swatch-brown"></span> Brown</button>
+                        <button class="color-pill" data-color="Red"><span class="swatch swatch-red"></span> Red</button>
+                        <button class="color-pill" data-color="Blue"><span class="swatch swatch-blue"></span> Blue</button>
+                        <button class="color-pill" data-color="Pink"><span class="swatch swatch-pink"></span> Pink</button>
+                        <button class="color-pill" data-color="Green"><span class="swatch swatch-green"></span> Green</button>
+                        <button class="color-pill" data-color="Purple"><span class="swatch swatch-purple"></span> Purple</button>
+                        <button class="color-pill" data-color="Pastels">Pastels</button>
+                        <button class="color-pill" data-color="Neutrals">Neutrals</button>
+                        <button class="color-pill" data-color="No Preference">No Preference</button>
+                    </div>
+                </div>
+
+
+                <!-- SECTION 04: OCCASION -->
+                <div class="form-card-step">
+                    <div class="step-card-header">
+                        <span class="step-badge">SECTION 04</span>
+                        <span class="eyebrow-sub">THE OCCASION</span>
+                    </div>
+                    <h2>Where are you dressing for?</h2>
+
+                    <div class="choice-grid-cards" id="occasionChoices">
+                        <button class="choice selected" data-value="Beach">Beach Party</button>
+                        <button class="choice" data-value="Office">Office & Corporate</button>
+                        <button class="choice" data-value="Casual">Casual Weekend</button>
+                        <button class="choice" data-value="College">College & Campus</button>
+                        <button class="choice" data-value="Party">Night Club / Party</button>
+                        <button class="choice" data-value="Date">Romantic Date</button>
+                        <button class="choice" data-value="Wedding">Wedding & Gala</button>
+                        <button class="choice" data-value="Reception">Reception</button>
+                        <button class="choice" data-value="Festive">Festive / Diwali</button>
+                        <button class="choice" data-value="Traditional">Traditional</button>
+                        <button class="choice" data-value="Vacation">Vacation & Resort</button>
+                        <button class="choice" data-value="Travel">Travel</button>
+                        <button class="choice" data-value="Dinner">Dinner</button>
+                        <button class="choice" data-value="Brunch">Sunday Brunch</button>
+                        <button class="choice" data-value="Concert">Concert / Fest</button>
+                        <button class="choice" data-value="Interview">Interview</button>
+                        <button class="choice" data-value="Family Function">Family Function</button>
+                        <button class="choice" data-value="Sports">Sports & Athleisure</button>
+                    </div>
+                </div>
+
+
+                <!-- SECTION 05: AESTHETIC -->
+                <div class="form-card-step">
+                    <div class="step-card-header">
+                        <span class="step-badge">SECTION 05</span>
+                        <span class="eyebrow-sub">YOUR AESTHETIC</span>
+                    </div>
+                    <h2>What's your vibe today?</h2>
+
+                    <div class="choice-grid-cards" id="styleChoices">
+                        <button class="choice selected" data-group="style" data-value="Western">Western Chic</button>
+                        <button class="choice" data-group="style" data-value="Indian">Traditional Indian</button>
+                        <button class="choice" data-group="style" data-value="Fusion">Indo-Western Fusion</button>
+                        <button class="choice" data-group="style" data-value="Minimal">Clean Minimal</button>
+                        <button class="choice" data-group="style" data-value="Streetwear">Streetwear</button>
+                        <button class="choice" data-group="style" data-value="Elegant">Old Money Luxe</button>
+                        <button class="choice" data-group="style" data-value="Sporty">Sporty Athleisure</button>
+                        <button class="choice" data-group="style" data-value="Boho">Boho Chic</button>
+                        <button class="choice" data-group="style" data-value="Trendy">Runway Trendy</button>
+                        <button class="choice" data-group="style" data-value="Y2K">Y2K Nostalgia</button>
+                    </div>
+                </div>
+
+
+                <!-- SECTION 06: OPTIONAL PHOTO -->
+                <div class="form-card-step">
+                    <div class="step-card-header">
+                        <span class="step-badge">SECTION 06</span>
+                        <span class="eyebrow-sub">OPTIONAL VISUAL ANALYSIS</span>
+                    </div>
+                    <h2>Upload a photo for visual analysis</h2>
+                    <p class="step-desc">Upload a full-body photo or outfit selfie. Completely optional — feel free to skip!</p>
+
+                    <label class="upload-dropzone">
+                        <input type="file" id="photo" accept="image/*">
+                        <span class="upload-icon">📷</span>
+                        <span id="uploadLabelText" class="upload-title">＋ Upload your photo</span>
+                        <span class="upload-sub">Full-body photo or outfit selfie · JPG, PNG · Optional</span>
+                    </label>
+                </div>
+
+
+                <!-- SECTION 07: GENERATE ACTION CTA -->
+                <div class="form-card-step generate-cta-card text-center">
+                    <span class="eyebrow-badge">THE AI STYLIST GENERATION</span>
+                    <h2 class="font-serif">Ready to create your look?</h2>
+                    <button id="generateBtn" class="btn-generate-main">
+                        ✨ GENERATE 3 CURATED LOOKS →
+                    </button>
+                    <p id="status" class="status-message"></p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- AI CURATED RESULTS SECTION -->
+        <section id="resultSection" class="result-section-luxe hidden">
+            <div class="container-center">
+                <div class="result-header-flex">
+                    <div>
+                        <span class="eyebrow-badge">STYLEMATE AI CURATION</span>
+                        <h2 class="font-serif">Your Curated Outfit Recommendations.</h2>
+                    </div>
+
+                    <!-- LOOK SWITCHER TABS -->
+                    <div class="look-tabs-bar" id="lookTabsContainer">
+                        <button class="look-tab active" data-look-idx="0">LOOK 01</button>
+                        <button class="look-tab" data-look-idx="1">LOOK 02</button>
+                        <button class="look-tab" data-look-idx="2">LOOK 03</button>
+                    </div>
+                </div>
+
+                <div id="result" class="result-card-container"></div>
+            </div>
+        </section>
+
+
+        <!-- AI CHATBOT SECTION (CONVERSATIONAL MODIFIER) -->
+        <section id="chat" class="chat-section-luxe">
+            <div class="container-center">
+                <div class="chat-card-wrapper">
+                    <div class="chat-card-header">
+                        <span class="eyebrow-badge">STYLEMATE AI CHATBOT</span>
+                        <h2 class="font-serif">Modify your look or ask anything.</h2>
+                        <p class="chat-sub">Tell StyleMate what you'd like to change conversationally.</p>
+                    </div>
+
+                    <!-- Quick Tweaks Bar -->
+                    <div class="quick-tweaks-bar" id="quickTweaksBar">
+                        <span class="quick-tweak-label">Quick Tweaks:</span>
+                        <button class="tweak-btn" data-tweak="I don't like straight jeans. Give me something baggy or bootcut">⚡ Change jeans to baggy</button>
+                        <button class="tweak-btn" data-tweak="Remove heels and give me flat sandals">👠 Swap heels for sandals</button>
+                        <button class="tweak-btn" data-tweak="Make this look more Gen-Z and trendy">✨ Make it Gen Z</button>
+                        <button class="tweak-btn" data-tweak="Make it look more expensive and luxury">💎 Make it look expensive</button>
+                    </div>
+
+                    <div class="chat-box-luxe">
+                        <div id="chatMessages" class="chat-messages-log">
+                            <div class="bot-message">
+                                Hi! I'm StyleMate. I understand your current outfit. Ask me to change any part or suggest fresh ideas!
+                            </div>
+                        </div>
+
+                        <div class="chat-input-bar">
+                            <input
+                                id="chatInput"
+                                type="text"
+                                placeholder="e.g. 'I don't like the straight jeans. Give me baggy or bootcut'..."
+                            >
+                            <button id="chatBtn" class="btn-chat-send">SEND →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER (SAME AS HOMEPAGE) -->
+    <footer class="footer-minimal">
+        <div class="container-center flex-between-footer">
+            <div class="footer-brand-box">
+                <span class="footer-title">StyleMate AI</span>
+                <span class="footer-tagline">AI PERSONAL STYLING · WHERE TECHNOLOGY MEETS STYLE</span>
+            </div>
+            <div class="footer-copy">
+                © 2026 StyleMate
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
